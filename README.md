@@ -77,6 +77,3 @@ Open http://localhost:5173
 - Order flow: ONLINE = PENDING_PAYMENT -> PAID -> SHIPPED -> DELIVERED; COD = PLACED -> SHIPPED -> DELIVERED.
 - Free shipping above ₹999, otherwise ₹50 (see `OrderService`).
 
-## Ideas to extend (good for your portfolio)
-Refresh tokens, image upload, product reviews, wishlist, email on order, Docker, unit tests with JUnit, deploy
-(Render/Railway for backend, Vercel/Netlify for frontend, free MySQL on Aiven/TiDB).
