@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: shopeasy/frontend
+        working-directory: shopper/shopeasy/frontend
     steps:
       - uses: actions/checkout@v4
 
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: shopeasy/frontend/package-lock.json
+          cache-dependency-path: shopper/shopeasy/frontend/package-lock.json
 
       - run: npm ci
 
@@ -38,14 +38,14 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: shopeasy/frontend/dist
+          path: shopper/shopeasy/frontend/dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: $${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
